@@ -80,7 +80,7 @@ function restoreLHotP(){
 
 function initLHotP(){
 	for (i=0; i < 24; i++) {
-		bingoCell = $("<input>").attr("id", "bingo" + i).attr("type", "checkbox")
+		bingoCell = $("<input>").attr("id", "bingo" + i).attr("name", "bingo" + i).attr("type", "checkbox")
 		bingoLabel = ($("<label>").attr("for", "bingo" + i).attr("id", "label" + i));
 		$("#cell" + i).html(bingoCell).append(bingoLabel);
 	}
