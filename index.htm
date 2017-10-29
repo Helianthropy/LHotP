@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>LHOTP Bingo</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/print.css" media="print" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/bingo.js"></script>
+    <script type="text/javascript" src="assets/js/tiles.js"></script>
+    <script type="text/javascript" src="assets/js/script2.js"></script>
+</head>
+<body>
+	<div id="page">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-3">Little House on the Praire Bingo</h1>
+          </div>
+        </div>
+        <div class="container">
+        	<form id="lhotp">
+        	<button type="button" class="btn btn-info" id="reset-lhotp" value="Reset Button" style="margin-bottom: 10px;">Reset</button>
+            <table class="table text-center table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">L</th>
+                        <th class="text-center">H</th>
+                        <th class="text-center">O</th>
+                        <th class="text-center">T</th>
+                        <th class="text-center">P</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td id="cell0">Pa is shirtless</td>
+                    <td id="cell5">Ma sells eggs</td>
+                    <td id="cell10">Carrie mumbles</td>
+                    <td id="cell14">New character introduced</td>
+                    <td id="cell19">They eat popcorn</td>
+                </tr>
+                <tr>
+                    <td id="cell1">Someone falls in love</td>
+                    <td id="cell6">"It'll be dark soon"</td>
+                    <td id="cell11">Pa laughs</td>
+                    <td id="cell15">Someone lights a lantern</td>
+                    <td id="cell20">Old Dan Tucker</td>
+                </tr>
+                <tr>
+                    <td id="cell2">CANDY</td>
+                    <td id="cell7">Puts on a pot of coffee</td>
+                    <td id="free"></td>
+                    <td id="cell16">Someone shoots a gun</td>
+                    <td id="cell21">Pa plays a fiddle</td>
+                </tr>
+                <tr>
+                    <td id="cell3">Someone gets Doc Baker</td>
+                    <td id="cell8">Mankato</td>
+                    <td id="cell12">Ma has her hair down</td>
+                    <td id="cell17">Mary &amp; Laura talk in bed</td>
+                    <td id="cell22">Goes to the creek</td>
+                </tr>
+                <tr>
+                    <td id="cell4">Someone has a secret</td>
+                    <td id="cell9">Famous person</td>
+                    <td id="cell13">Someone is sexist or racist</td>
+                    <td id="cell18">Dinner is made</td>
+                    <td id="cell23">Pa laughs</td>
+                </tr>
+                </tbody>
+            </table>
+            </form>
+        </div>
+	</div>
+</body>
+</html>

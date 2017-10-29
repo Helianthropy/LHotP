@@ -1,0 +1,6 @@
+@media print {
+   input[type=checkbox], button, #reset-lhotp, .jumbotron {
+       display: none;
+   }
+   .display-3 { font-size: 12px;}
+}

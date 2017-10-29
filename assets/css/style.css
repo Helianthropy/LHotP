@@ -1,0 +1,26 @@
+td{
+    color:#333;
+    padding: 35px 0 !important;
+    cursor:pointer;
+}
+
+.active {
+    background: url('praire.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#free{
+	background: url('https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/LHMainTitle.jpg/250px-LHMainTitle.jpg') no-repeat 0 -43px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	cursor:default;
+}
+
+input[type=checkbox]:checked {
+    background: #d4edda;
+}
