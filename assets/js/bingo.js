@@ -71,7 +71,15 @@ function restoreLHotP(){
 	try {
 		var savedContent = localStorage.getItem('LHotP');	
 		console.log(savedContent);	
-	$('#lhotp').deserialize(savedContent);
+		$('#lhotp').deserialize(savedContent);
+		lhotpItems = JSON.parse($("#bingo-tiles").attr("value"));
+		for (var key in lhotpItems) {
+		  if (lhotpItems.hasOwnProperty(key)) {
+			$("#bingo" + key).attr("value", lhotpItems[key]);
+			$("#label" + key).html(lhotpItems[key]);
+		  }
+		}
+		$('#lhotp').deserialize(savedContent);
 	} catch(e){
 		console.log(e);
 		shuffleLHotP();
@@ -80,19 +88,24 @@ function restoreLHotP(){
 
 function initLHotP(){
 	for (i=0; i < 24; i++) {
-		bingoCell = $("<input>").attr("id", "bingo" + i).attr("name", "bingo" + i).attr("type", "checkbox")
+		bingoCell = $("<input>").attr("id", "bingo" + i).attr("name", "bingo" + i).attr("type", "checkbox");
 		bingoLabel = ($("<label>").attr("for", "bingo" + i).attr("id", "label" + i));
 		$("#cell" + i).html(bingoCell).append(bingoLabel);
 	}
 }
 
 function shuffleLHotP(){
+	$('#lhotp input:checkbox').prop('checked', false);
 	lhotpItems = shuffle(lhotpTiles);
+	bingoTiles = {};
 	for (i = 0; i < 24; i++) {
 		console.log("Bingo " + i + ": " + lhotpItems[i]);
 		//bingoCell = $("<input>").setAttribute("id", bingo + i).html($("<label>").html(lhotpItems[i]));
 		$("#label" + i).html(lhotpItems[i]);
+		$("#bingo" + i).attr("value", lhotpItems[i]);
+		bingoTiles[i] = lhotpItems[i];
 	}
+	$("#bingo-tiles").attr("value", JSON.stringify(bingoTiles));
 	return true;
 }
 
