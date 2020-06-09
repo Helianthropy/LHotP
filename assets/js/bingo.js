@@ -27,7 +27,10 @@ $.fn.deserialize = function (serializedString)
 				// Special case if the value is not defined; value will be "on"
 				if (!isFound && value == "on") {
 					$field.first().prop("checked", true);
+					console.log($($field).parent());
 				} else {
+					console.log($($field).parent());
+					$($field).parent().css('background-color', '#d4edda');
 					$fieldWithValue.prop("checked", isFound);
 				} 
 			} else { // input, textarea
@@ -117,6 +120,13 @@ $(document).ready(function() {
 		shuffleLHotP();
 	});
 	$("#lhotp input").on("click", function(){
+	});
+	$("td[id]").on("click", function(){
+		console.log("Table cell clicked.");
+		$(this).children("input").prop("checked", function(i, value) {
+			return !value;
+		});
 		saveLHotP();
+		return false;
 	});
 });

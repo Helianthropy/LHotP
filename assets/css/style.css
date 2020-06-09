@@ -24,3 +24,7 @@ td{
 input[type=checkbox]:checked {
     background: #d4edda;
 }
+
+input[type=checkbox] {
+	visibility: hidden;
+}
